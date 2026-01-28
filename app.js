@@ -58,7 +58,7 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
         },
       });
     }
-// "challenge" command
+    // "challenge" command
 if (name === 'challenge' && id) {
   // Interaction context
   const context = req.body.context;
@@ -99,6 +99,7 @@ if (name === 'challenge' && id) {
     },
   });
 }
+
 
     console.error(`unknown command: ${name}`);
     return res.status(400).json({ error: 'unknown command' });
